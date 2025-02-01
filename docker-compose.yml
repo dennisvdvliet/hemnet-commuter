@@ -11,11 +11,6 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=hemnet_commuter
-    healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
 
 volumes:
   mysql:
