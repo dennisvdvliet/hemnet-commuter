@@ -5,7 +5,7 @@ services:
     image: mattrayner/lamp:latest
     container_name: hemnet_commuter
     ports:
-      - "8000:80"
+      - "8004:80"
     volumes:
       - ./app:/app
       - ./mysql:/var/lib/mysql
