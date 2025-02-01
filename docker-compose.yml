@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  web:
+    image: mattrayner/lamp:latest
+    container_name: hemnet_commuter
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/app
+      - ./mysql:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=hemnet_commuter
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  mysql:
+  app:
