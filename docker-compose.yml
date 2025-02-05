@@ -2,9 +2,8 @@ version: '3.8'
 
 services:
   web:
-    image: mattrayner/lamp:latest
+    image: mattrayner/lamp:0.8.0-1804-php7
     container_name: hemnet_commuter
-    platform: linux/arm64
     ports:
       - "8004:80"
     volumes:
