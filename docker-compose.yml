@@ -2,16 +2,7 @@ version: '3.8'
 
 services:
   web:
-    image: mattrayner/lamp:0.8.0-1804-php7
+    build: . 
     container_name: hemnet_commuter
     ports:
       - "8004:80"
-    volumes:
-      - ${PWD}/app:/app
-      - ./mysql:/var/lib/mysql
-    environment:
-      - MYSQL_DATABASE=hemnet_commuter
-
-volumes:
-  mysql:
-  app:
