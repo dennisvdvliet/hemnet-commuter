@@ -4,7 +4,7 @@ services:
   web:
     image: mattrayner/lamp:latest
     container_name: hemnet_commuter
-    platform: linux/amd64
+    platform: linux/arm64
     ports:
       - "8004:80"
     volumes:
