@@ -37,7 +37,7 @@ error_reporting(E_ALL);
 $ini_array = parse_ini_file($ini_fn);
 
 // Connect to the database
-$mysqli = @new mysqli("localhost", $ini_array['db_user'], $ini_array['db_password'], $ini_array['db_name']);
+$mysqli = @new mysqli($ini_array['db_host'], $ini_array['db_user'], $ini_array['db_password'], $ini_array['db_name']);
 if ($mysqli->connect_errno) {
   echo json_encode(array(
     'status' => 'error',
