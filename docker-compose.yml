@@ -7,7 +7,7 @@ services:
     ports:
       - "8004:80"
     volumes:
-      - ./app:/app
+      - ${PWD}/app:/app
       - ./mysql:/var/lib/mysql
     environment:
       - MYSQL_DATABASE=hemnet_commuter
