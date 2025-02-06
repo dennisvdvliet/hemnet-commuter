@@ -131,7 +131,7 @@ function fetch_hemnet_houses(){
             $this_house[$k] = '';
             continue;
           }
-          $this_house[$k] = @$listing[$k];
+          $this_house[$k] = mysqli_real_escape_string($mysqli, @$listing[$k]);
         }
         foreach($bool_keys as $k){
           if(!array_key_exists($k, $listing)) {
