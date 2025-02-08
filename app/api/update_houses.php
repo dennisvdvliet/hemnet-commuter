@@ -118,6 +118,7 @@ function fetch_hemnet_houses(){
 
       // Parse the response
       $results_json = @json_decode($result_raw, true);
+      error_log("Hemnet result: " . $result_raw);
       $num_results = $results_json['data']['searchListings']['total'];
 
       $all_lat_lng = [];
